@@ -1,0 +1,117 @@
+.header{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__btn{
+        button{
+            font-size: 20px;
+            color: #fff;
+            background: linear-gradient(to left, #018ABE , #00faedbe ,#018ABE  );
+            text-decoration:none;
+            padding: 12px 15px;
+            border-radius: 3px;
+            background-size: 200%;
+            border:none;
+            transition: 1s;
+            &:hover{
+                background-position:right
+            }
+        }
+    }
+    &__list__items{
+        display: flex;
+       
+        margin: 0;
+        padding-inline-start: 0;
+        list-style-type: none;
+    }
+    &__list__item{
+        a{
+            
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: none;
+            color:#fff;
+            &__active{
+                color{
+                    
+                }
+            }
+            &:hover{
+                animation-name: nav-link-gradient;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                &::after{
+                transition: .4s linear;
+                width: 100%;
+                }
+            }
+
+         position: relative;
+
+         &::after{
+            display: block;
+            content: "";
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+
+          
+         }
+            
+        }
+        margin-left: 50px;
+        &:first-child{
+            margin-left: 0px;
+        }
+      
+    }
+
+    &__logo{
+        img{
+            animation-name: rotate-logo;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes rotate-logo{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(35deg) scale(110%);
+        
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-35deg) scale(110%);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes nav-link-gradient{
+    0%{
+       color:#fff;
+    }
+    50%{
+        color:#00faedf9;
+    }
+    70%{
+        color:#fff;
+    }
+}
