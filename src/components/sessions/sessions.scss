@@ -35,20 +35,20 @@
             display: block;
             content: "";
             position: absolute;
-            width: 100%;
+            width: 10%;
             height: 100%;
             top:0;
-            left: -225px;
+            left: 340px;
             background: url("../..//img/blueLeftLep.png") no-repeat center;
         }
         &::after{
             display: block;
             content: "";
             position: absolute;
-            width: 100%;
+            width: 10%;
             height: 100%;
             top:0;
-            right: -225px;
+            right:340px;
             background: url("../..//img/blueRightLep.png") no-repeat center;
         }
     }
